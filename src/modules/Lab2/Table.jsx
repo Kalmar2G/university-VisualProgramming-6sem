@@ -1,13 +1,13 @@
 import React, { useState, useCallback } from 'react';
 import TableHeader from './TableHeader';
 import AudioRecord from './AudioRecord';
-import diary from './diary.json';
+import songs from './compositions.json';
 import './styles.css';
 
 export const Table = () => {
-  const [data, setData] = useState(diary);
+  const [data, setData] = useState(songs);
   const onChangeFilters = useCallback((albumFilter, authorsFilter, titlesFilter) => {
-    const newData = diary.filter((song) => {
+    const newData = songs.filter((song) => {
       const checkAuthor = authorsFilter === '' ? true : song.author === authorsFilter;
       const checkAlbum = albumFilter === '' ? true : song.album === albumFilter;
       const checkTitle =

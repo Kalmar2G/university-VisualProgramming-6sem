@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
 import { Button } from '../common/Button';
-import music from './diary.json';
+import music from './compositions.json';
 import './styles.css';
 
 const TableHeader = ({ onChangeFilters }) => {
