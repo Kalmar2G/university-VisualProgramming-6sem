@@ -6,10 +6,22 @@ import QAbstractListModel from './QAbstractListModel';
 import { Task } from './Setup';
 import './styles.css';
 
+class TextGetter {
+  constructor(func) {
+    this.innerFunc = func;
+  }
+
+  getText(el) {
+    return this.innerFunc(el);
+  }
+}
+
 const BufferVisual = ({ printSpeed, maxBuffer, coefficient, tasks }) => {
   const [queueTasks, setQueueTasks] = useState(tasks);
   const [finishTasks, setFinishTasks] = useState([]);
   const [cancelTasks, setCancelTasks] = useState([]);
+  const getText = (el) => el;
+  const instanse = new TextGetter(getText);
   const updateQueue = () => {
     const random = Math.random();
     const lastNumber = queueTasks[queueTasks.length - 1]?.number;
@@ -70,7 +82,7 @@ const BufferVisual = ({ printSpeed, maxBuffer, coefficient, tasks }) => {
               <th className="table_queue-header__item">Название</th>
               <th className="table_queue-header__item">Количество страниц</th>
             </tr>
-            <QAbstractListModel data={queueTasks} />
+            <QAbstractListModel data={queueTasks} getter={instanse} />
           </table>
         </Grid>
         <Grid item xs={4}>
@@ -83,7 +95,7 @@ const BufferVisual = ({ printSpeed, maxBuffer, coefficient, tasks }) => {
               <th className="table_queue-header__item">Название</th>
               <th className="table_queue-header__item">Количество страниц</th>
             </tr>
-            <QAbstractListModel data={finishTasks} />
+            <QAbstractListModel data={finishTasks} getter={instanse} />
           </table>
         </Grid>
         <Grid item xs={4}>
@@ -95,7 +107,7 @@ const BufferVisual = ({ printSpeed, maxBuffer, coefficient, tasks }) => {
               <th className="table_queue-header__item">Название</th>
               <th className="table_queue-header__item">Количество страниц</th>
             </tr>
-            <QAbstractListModel data={cancelTasks} />
+            <QAbstractListModel data={cancelTasks} getter={instanse} />
           </table>
         </Grid>
       </Grid>
