@@ -36,6 +36,8 @@ module.exports = {
 
     'react/jsx-filename-extension': 0,
     'consistent-return': 0,
+    'no-undef': 0,
+    'no-unused-vars': 0,
 
     'import/no-cycle': 0,
     'max-classes-per-file': 0,

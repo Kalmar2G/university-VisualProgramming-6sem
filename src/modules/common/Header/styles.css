@@ -1,0 +1,8 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}

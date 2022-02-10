@@ -1,7 +1,7 @@
 import { Redirect, Switch, Route, BrowserRouter } from 'react-router-dom';
-import { ScenariosPage } from 'modules/Scenarios';
-import { TreesPage } from 'modules/Trees';
-import { FaultTreeNodeDictionaryPage } from 'modules/FaultTreeNodeDictionary';
+import { Interfaces } from 'modules/Lab1/Interfaces';
+import { Table } from 'modules/Lab2';
+import { Setup } from 'modules/Lab3';
 import { Header } from 'modules/common/Header';
 
 export const AppRouter = () => {
@@ -9,10 +9,10 @@ export const AppRouter = () => {
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route path="/faultTreeNodeDictionary" component={FaultTreeNodeDictionaryPage} />
-        <Route path="/trees" exact component={TreesPage} />
-        <Route path="/scenarios" exact component={ScenariosPage} />
-        <Redirect to="/faultTreeNodeDictionary" />
+        <Route path="/lab1" exact component={Interfaces} />
+        <Route path="/lab2" exact component={Table} />
+        <Route path="/lab3" component={Setup} />
+        <Redirect to="/lab2" />
       </Switch>
     </BrowserRouter>
   );
