@@ -24,3 +24,9 @@ In the project directory, you can run:
 ```
  yarn eslint
 ```
+
+### Билд проекта
+
+```
+ yarn build
+```
