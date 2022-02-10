@@ -56,7 +56,7 @@ const TableHeader = ({ onChangeFilters }) => {
                 value={authorsFilter}
                 onChange={(e) => setAuthorsFilter(e.target.value)}
               >
-                <option>не выбрано</option>
+                <option value="">не выбрано</option>
                 {authorsFilterArray.map((author) => (
                   <option value={author}>{author}</option>
                 ))}
@@ -71,9 +71,7 @@ const TableHeader = ({ onChangeFilters }) => {
                 value={albumFilter}
                 onChange={(e) => setAlbumFilter(e.target.value)}
               >
-                <option selected="selected" value="">
-                  не выбран
-                </option>
+                <option value="">не выбран</option>
                 {albumFilterArray.map((album) => (
                   <option value={album}>{album}</option>
                 ))}
