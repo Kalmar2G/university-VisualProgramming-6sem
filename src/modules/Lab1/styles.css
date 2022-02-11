@@ -1,0 +1,175 @@
+.table-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.table-row__data {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    color: #3b3737;
+    background: grey;
+    border-radius: 15px;
+    max-height: 600px;
+    overflow-x: hidden;
+}
+
+.table-wrapper_lab1 {
+    width: 100%;
+    margin: 0 auto;
+    color: #4d4d4d;
+    background: #a6a5a5;
+    max-height: 800px;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0;
+}
+
+.SubdHeader {
+    background: grey;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 3px;
+}
+
+.tabsWrapper {
+    width: 1000px;
+    color: #2d2d2d;
+    background: #b7b7b7;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.tab {
+    width: 100px;
+    color: #3b3737;
+    background: #d7d1d1;
+    height: 25px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.sideMenu {
+    width: 250px;
+    background: #cecbcb;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideMenuItem {
+    background: #f5e5e5;
+    margin-bottom: 1px;
+}
+
+.sideMenuItem:hover {
+    background: #fad0d0;
+}
+
+.mainArea {
+    background: #e5e2e2;
+    max-width: 750px;
+}
+
+.flex {
+    display: flex;
+}
+
+.mainAreaFilters {
+    background: #c5c7c5;
+}
+
+.tab:hover {
+    background: #f6c5c5;
+    height: 28px;
+}
+
+.table_lab1 {
+    text-align: center;
+    width: 100%;
+}
+
+.loading-text {
+    flex: 0 1 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: auto;
+}
+
+.search-status {
+    height: 200px;
+    padding-top: 100px;
+    width: 100%;
+}
+
+.search-status_loading {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.table-header {
+    display: flex;
+    padding: 5px 0;
+}
+
+.table-header_lab1 {
+    background: #a69494;
+    display: flex;
+    padding: 5px 0;
+}
+
+.table-body {
+    width: 100%;
+}
+
+.table-header__item {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1 1 20%;
+    font-size: 12px;
+}
+
+.table-row:hover {
+    border: 1px solid black;
+    background: #5a5a5a;
+    border-radius: 5px;
+}
+
+.input {
+    width: 70%;
+    height: 20px;
+    font-size: 15px;
+    background: white;
+    color: black;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.select {
+    width: 70%;
+    height: 20px;
+    font-size: 15px;
+    background: white;
+    color: black;
+    outline: none;
+    text-align-last: center;
+}

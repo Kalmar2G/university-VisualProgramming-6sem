@@ -1,10 +1,19 @@
 import React from 'react';
+import { Divider, Grid } from '@material-ui/core';
+import Tabs from './Tabs';
+import SideMenu from './SideMenu';
+import './styles.css';
+import MainArea from './MainArea';
 
 export const Interfaces = () => {
   return (
-    <>
-      <p style={{ fontSize: '20px', textAlign: 'center', color: 'red' }}>In Progress...</p>
-      <div style={{ width: 600, height: 600 }} />
-    </>
+    <div className="wrapper">
+      <Tabs header />
+      <Divider />
+      <Grid className="flex" container>
+        <SideMenu />
+        <MainArea />
+      </Grid>
+    </div>
   );
 };
