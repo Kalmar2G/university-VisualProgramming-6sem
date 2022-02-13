@@ -9,9 +9,8 @@ const SideMenuItem = ({ type, depth }) => {
   return (
     <Box className="sideMenuItem">
       <Grid container>
-        <Grid item xs={1} />
-        <Grid item xs={depth} />
-        <Grid container item xs={12 - depth - 1} justifyContent="flex-start">
+        <Grid item xs={1 + depth} />
+        <Grid container item xs={12 - depth - 2} justifyContent="flex-start">
           {type === 'folder' && <ArrowDropDownIcon />}
           {type === 'folder' && <FolderIcon />}
           {type === 'file' && <DescriptionIcon />}

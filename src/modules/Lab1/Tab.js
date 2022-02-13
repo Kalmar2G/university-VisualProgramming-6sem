@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { Box, Grid } from '@material-ui/core';
 
-const Tab = ({ text }) => {
+const Tab = ({ text, onDelete }) => {
   return (
     <Box className="tab">
       <Grid container>
@@ -11,7 +11,7 @@ const Tab = ({ text }) => {
           {text}
         </Grid>
         <Grid item sm={3}>
-          <CancelIcon fontSize="small" />
+          <CancelIcon fontSize="small" onClick={onDelete} />
         </Grid>
       </Grid>
     </Box>
@@ -19,5 +19,6 @@ const Tab = ({ text }) => {
 };
 Tab.propTypes = {
   text: PropTypes.string,
+  onDelete: PropTypes.func,
 };
 export default Tab;

@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CancelIcon from '@material-ui/icons/Cancel';
 import AspectRatioIcon from '@material-ui/icons/AspectRatio';
+import AddIcon from '@material-ui/icons/Add';
 import { Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Tab from './Tab';
 
-const tabs = [
-  'вкладка 1',
-  'вкладка 2',
-  'вкладка 3',
-  'вкладка 4',
-  'вкладка 5',
-  'вкладка 6',
-  'вкладка 7',
-];
-
 const Tabs = ({ header }) => {
+  const [tabs, setTabs] = useState([
+    'вкладка',
+    'вкладка',
+    'вкладка',
+    'вкладка',
+    'вкладка',
+    'вкладка',
+    'вкладка',
+  ]);
+  const onDelete = () => {
+    setTabs((prev) => prev.filter((el, index) => index !== 0));
+  };
+  const onAdd = () => {
+    setTabs((prev) => [...prev, 'вкладка']);
+  };
   return (
     <>
       {header && (
@@ -32,9 +38,10 @@ const Tabs = ({ header }) => {
         </div>
       )}
       <div className="tabsWrapper">
-        {tabs.map((tab) => (
-          <Tab text={tab} />
+        {tabs.map((tab, index) => (
+          <Tab text={`${tab} ${index + 1}`} onDelete={onDelete} key={index} />
         ))}
+        <AddIcon onClick={onAdd} />
       </div>
     </>
   );

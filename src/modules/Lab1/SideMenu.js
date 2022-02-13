@@ -24,8 +24,8 @@ const SideMenu = () => {
   return (
     <div className="sideMenu">
       <TextField placeholder="Поиск по файлам" />
-      {data.map((item) => (
-        <SideMenuItem type={item.type} depth={item.depth} />
+      {data.map((item, index) => (
+        <SideMenuItem type={item.type} depth={item.depth} key={index} />
       ))}
     </div>
   );

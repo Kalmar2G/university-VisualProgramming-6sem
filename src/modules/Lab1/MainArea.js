@@ -35,7 +35,7 @@ const MainArea = () => {
             <TableHeader />
             <tbody className="table-body">
               {new Array(8).fill(0).map((record, index) => (
-                <TableRecord index={index + 1} />
+                <TableRecord index={index + 1} key={index} />
               ))}
             </tbody>
           </table>
