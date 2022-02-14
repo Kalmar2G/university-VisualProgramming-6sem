@@ -13,6 +13,7 @@ const SideMenuItem = ({ type, depth }) => {
         <Grid container item xs={12 - depth - 2} justifyContent="flex-start">
           {type === 'folder' && <ArrowDropDownIcon />}
           {type === 'folder' && <FolderIcon />}
+          {type === 'file' && depth > 0 && <Grid item xs={1} />}
           {type === 'file' && <DescriptionIcon />}
           <p>{type}</p>
         </Grid>
