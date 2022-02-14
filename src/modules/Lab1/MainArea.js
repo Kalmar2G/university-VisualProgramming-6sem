@@ -5,9 +5,9 @@ import Filter2Icon from '@material-ui/icons/Filter2';
 import Filter3Icon from '@material-ui/icons/Filter3';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import SearchIcon from '@material-ui/icons/Search';
-import Tabs from './Tabs';
-import TableHeader from './TableHeader';
-import TableRecord from './TableRecord';
+import Tabs from './Tabs/Tabs';
+import TableHeader from './Table/TableHeader';
+import TableRecord from './Table/TableRecord';
 
 const MainArea = () => {
   return (

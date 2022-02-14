@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider, Grid } from '@material-ui/core';
-import Tabs from './Tabs';
-import SideMenu from './SideMenu';
+import Tabs from './Tabs/Tabs';
+import SideMenu from './SideMenu/SideMenu';
 import './styles.css';
 import MainArea from './MainArea';
 
